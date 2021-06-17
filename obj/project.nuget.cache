@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/XfhbScdHCosIy0ptNstLf0VNNAQt/v99zxKt7zmyYHOl6JHng+4KqxQ1A52fSDPPsXMyMrf57xmYJ7dodoXwg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP EliteBook 840 G3\\Documents\\repos\\WEB\\WebAPI\\WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP EliteBook 840 G3\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840 G3\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840 G3\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840 G3\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840 G3\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\HP EliteBook 840 G3\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
