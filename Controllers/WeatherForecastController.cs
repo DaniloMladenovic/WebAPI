@@ -24,6 +24,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
+        [Route("GetAll")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -34,6 +35,18 @@ namespace WebAPI.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet]
+        [Route("Get")]
+        public WeatherForecast GetOne()
+        {
+            return new WeatherForecast
+            {
+                Date = DateTime.Now,
+                TemperatureC = 21,
+                Summary = "Lep dan danas."
+            };
         }
     }
 }
