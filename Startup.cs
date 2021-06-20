@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using WebAPI.Models;
 
 namespace WebAPI
 {
@@ -26,19 +28,26 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CORS", builder =>
+                {
+                    builder.AllowAnyHeader()
+                     .AllowAnyMethod()
+                     .WithOrigins(new string[]
+                     {
+                        "http://127.0.0.1:5500"
+                     });
+                });
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
             });
-            services.AddCors(p =>
+            services.AddDbContext<KingdomContext>(options =>
             {
-                p.AddPolicy("CORS", builder =>
-                {
-                    builder.AllowAnyMethod()
-                    .AllowAnyOrigin();
-                });
+                options.UseSqlServer(Configuration.GetConnectionString("KingdomCS"));
             });
         }
 
